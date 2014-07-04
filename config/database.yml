@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: utf-8
+  pool: 5
+
+development:
+  <<: *default
+  database: shouter_development
+
+test:
+  <<: *default
+  database: shouter_test
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>

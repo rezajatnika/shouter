@@ -1,0 +1,3 @@
+Shouter::Application.routes.draw do
+  # ...
+end
