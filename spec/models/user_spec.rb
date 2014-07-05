@@ -27,17 +27,17 @@ describe User do
     it { expect(Fabricate.build(:user, username: 'foo$%')).to be_invalid }
   end
 
-  context 'when password is too short' do
+  context 'when password is less than 5 characters' do
     short_pass = Fabricate.build(:user, password: 'asd', password_confirmation: 'asd')
     it { expect(short_pass).to be_invalid }
   end
 
   describe 'length of username' do
-    context 'when is too short' do
+    context 'when less than 3 characters' do
       it { expect(Fabricate.build(:user, username: 'fo')).to be_invalid }
       end
 
-    context 'when is too long' do
+    context 'when more than 25 characters' do
       it { expect(Fabricate.build(:user, username: "#{ 'a' * 26 }")).to be_invalid }
     end
   end
