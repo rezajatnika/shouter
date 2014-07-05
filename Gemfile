@@ -10,6 +10,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :development do
   gem 'thin', '~> 1.6.2'
   gem 'figaro', '~> 0.7.0'
+  gem 'spring', '~> 1.1.3'
 end
 
 # Test and development
