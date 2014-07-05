@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.6'
 gem 'pg', '~> 0.17.1'
 gem 'haml-rails', '~> 0.5.3'
+gem 'bcrypt', '~> 3.1.7'
 
 # Development gems
 group :development do
@@ -14,6 +15,12 @@ end
 # Test and development
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+end
+
+# Test gems
+group :test do
+  gem 'fabrication', '~> 2.11.3'
+  gem 'database_cleaner', '~> 1.3.0'
 end
 
 # Assets gems
